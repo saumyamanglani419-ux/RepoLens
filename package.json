@@ -1,0 +1,20 @@
+{
+  "name": "repolens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "RepoLens - understand any codebase at a glance. MERN app that analyzes public GitHub repositories.",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server",
+    "typecheck": "npm run typecheck --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
